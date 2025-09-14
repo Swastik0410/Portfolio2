@@ -37,7 +37,7 @@ export default function Hero() {
       <motion.img
         src={yourPhoto}
         alt="Your portrait"
-        className="relative z-10 mx-auto rounded-2xl w-36 h-36 sm:w-44 sm:h-44 object-cover shadow-lg border-4 border-orange-500"
+        className="relative z-10 mx-auto rounded-2xl w-40 h-40 sm:w-44 sm:h-44 object-cover shadow-lg border-4 border-orange-500"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
