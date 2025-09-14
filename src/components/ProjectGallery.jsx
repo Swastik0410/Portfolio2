@@ -5,6 +5,7 @@ const allProjects = [
   { title: "Streamly", category: "Web", link: "https://github.com/Swastik0410/Chaibackend0ngoing", description: "A FullStack Video Streaming application made using Express, Node, MongoDB, Cloudinary etc.." },
   { title: "Task-Hive", category: "Web", link: "https://www.linkedin.com/posts/swastik-roy-b11162216_taskhive-reactjs-tailwindcss-activity-7364535050685550593-GgnM?utm_source=share&utm_medium=member_desktop&rcm=ACoAADZ75b0Bef47O75Cz9iQNrrAoN74prWw1vo", description: "An Employee Management System with Admin and Employee dashboards" },
   { title: "Nutri-Track", category: "Web", link: "https://nutritrack0410.netlify.app/", description: "A calorie Tracker app curated based on Indian food options" },
+  { title: "swastik.portfolio", category: "Web", link: "https://github.com/Swastik0410/Portfolio2", description: "If you like this portfolio , you can check it out below" },
   { title: "Fake news Detection System", category: "Machine Learning", link: "https://github.com/Swastik0410/fakenews0410", description: "A fake news Detection System based on Logistic Regression  and TF-IDF Vectorization " },
 ];
 // Fixed background code patterns with string escaping
