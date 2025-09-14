@@ -1,19 +1,45 @@
 import { saveAs } from "file-saver";
+import { motion } from "framer-motion";
 import resume from "../assets/resume.pdf";
 
 export default function ResumeViewer() {
   const downloadResume = () => saveAs(resume, "Your_Name_Resume.pdf");
 
   return (
-    <section className="text-center py-10 bg-gray-100">
-      <h2 className="text-3xl font-semibold mb-4">My Resume</h2>
-      <p className="mb-6">Click below to download my resume as a PDF.</p>
-      <button
+    <section className="text-center py-16 bg-black text-white">
+      {/* Title */}
+      <motion.h2
+        className="text-4xl font-bold mb-4"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        My Resume
+      </motion.h2>
+
+      {/* Description */}
+      <p className="text-gray-400 mb-8">
+        View or download my resume below.
+      </p>
+
+      {/* PDF Preview */}
+      <div className="max-w-3xl mx-auto mb-8 border border-gray-800 rounded-xl overflow-hidden shadow-lg">
+        <iframe
+          src={resume}
+          title="Resume Preview"
+          className="w-full h-[600px]"
+        />
+      </div>
+
+      {/* Download Button */}
+      <motion.button
         onClick={downloadResume}
-        className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        className="px-6 py-3 bg-orange-500 text-white font-medium rounded-xl shadow-lg hover:bg-orange-600 transition"
       >
         Download Resume
-      </button>
+      </motion.button>
     </section>
   );
 }
