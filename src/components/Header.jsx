@@ -7,15 +7,15 @@ export default function Header() {
   return (
     <header className=" bg-orange-400 backdrop-blur-md shadow-md p-4 flex justify-between items-center sticky top-0 z-50">
       {/* Logo / Name */}
-      <h1 className="text-2xl font-bold text-black">Your Name</h1>
+      <h1 className=" font-mono text-2xl font-bold text-black">swastik.portfolio</h1>
 
       {/* Desktop Nav */}
       <nav className=" hidden md:flex space-x-6 text-black">
-        <Link to="/" className="hover:text-gray-600 transition">Home</Link>
-        <Link to="/projects" className="hover:text-gray-600 transition">Projects</Link>
-        <Link to="/skills" className="hover:text-gray-600 transition">Skills</Link>
-        <Link to="/resume" className="hover:text-gray-600 transition">Resume</Link>
-        <Link to="/contact" className="hover:text-gray-600 transition">Contact</Link>
+        <Link to="/" className="hover:text-gray-600 transition font-bold hover:text-xl  font-mono">Home</Link>
+        <Link to="/projects" className="hover:text-gray-600 transition font-bold hover:text-xl font-mono">Projects</Link>
+        <Link to="/skills" className="hover:text-gray-600 transition font-bold hover:text-xl font-mono">Skills</Link>
+        <Link to="/resume" className="hover:text-gray-600 transition font-bold hover:text-xl font-mono">Resume</Link>
+        <Link to="/contact" className="hover:text-gray-600 transition font-bold hover:text-xl font-mono">Contact</Link>
       </nav>
 
       {/* Mobile Menu Button */}

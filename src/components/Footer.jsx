@@ -6,7 +6,7 @@ export default function Footer() {
       {/* Social Icons */}
       <div className="flex justify-center space-x-6 mb-4">
         <a
-          href="https://github.com"
+          href="https://github.com/Swastik0410"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-orange-500 transition"
@@ -14,7 +14,7 @@ export default function Footer() {
           <Github className="w-6 h-6" />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/swastik-roy-b11162216/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-orange-500 transition"
@@ -22,7 +22,7 @@ export default function Footer() {
           <Linkedin className="w-6 h-6" />
         </a>
         <a
-          href="mailto:you@example.com"
+          href="mailto:swastik0410@gmail.com"
           className="hover:text-orange-500 transition"
         >
           <Mail className="w-6 h-6" />
@@ -31,7 +31,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <p className="text-sm">
-        © {new Date().getFullYear()} <span className="text-white">Your Name</span>. All rights reserved.
+        © {new Date().getFullYear()} <span className="text-white">Swastik Roy</span>. All rights reserved.
       </p>
     </footer>
   );

@@ -2,20 +2,46 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const allProjects = [
-  { title: "Weather App", category: "Web", link: "#", description: "Weather info using API" },
-  { title: "Task Manager", category: "Web", link: "#", description: "Manage tasks with Firebase" },
-  { title: "Chat App", category: "Mobile", link: "#", description: "React Native chat app" },
+  { title: "Streamly", category: "Web", link: "https://github.com/Swastik0410/Chaibackend0ngoing", description: "A FullStack Video Streaming application made using Express, Node, MongoDB, Cloudinary etc.." },
+  { title: "Task-Hive", category: "Web", link: "https://www.linkedin.com/posts/swastik-roy-b11162216_taskhive-reactjs-tailwindcss-activity-7364535050685550593-GgnM?utm_source=share&utm_medium=member_desktop&rcm=ACoAADZ75b0Bef47O75Cz9iQNrrAoN74prWw1vo", description: "An Employee Management System with Admin and Employee dashboards" },
+  { title: "Nutri-Track", category: "Web", link: "https://nutritrack0410.netlify.app/", description: "A calorie Tracker app curated based on Indian food options" },
+  { title: "Fake news Detection System", category: "Machine Learning", link: "https://github.com/Swastik0410/fakenews0410", description: "A fake news Detection System based on Logistic Regression  and TF-IDF Vectorization " },
+];
+// Fixed background code patterns with string escaping
+const codePatterns = [
+  { id: 1, symbol: "{}", top: "20%", left: "15%" },
+  { id: 2, symbol: "</>", top: "40%", left: "75%" },
+  { id: 3, symbol: "=>", top: "65%", left: "25%" },
+  { id: 4, symbol: "function()", top: "30%", left: "55%" },
+  { id: 5, symbol: "console.log()", top: "55%", left: "71%" },
+  { id: 6, symbol: "System.Out.Println('Swastik\\'s Portfolio');", top: "79%", left: "5%" }, // escaped apostrophe
+  { id: 7, symbol: "SELECT * FROM SWASTIK;", top: "10%", left: "2%" },
+  { id: 8, symbol: "npm i swastik", top: "15%", left: "65%" }
 ];
 
 export default function ProjectGallery() {
   const [filter, setFilter] = useState("All");
-  const categories = ["All", "Web", "Mobile"];
+  const categories = ["All", "Web", "Machine Learning"];
 
   const filteredProjects =
     filter === "All" ? allProjects : allProjects.filter((p) => p.category === filter);
 
   return (
     <section id="projects" className="py-16 bg-black text-white">
+      {/* Background code patterns */}
+      {codePatterns.map((item) => (
+        <span
+          key={item.id}
+          className="absolute text-gray-700 font-mono select-none pointer-events-none opacity-50"
+          style={{
+            top: item.top,
+            left: item.left,
+            fontSize: `clamp(1rem, 5vw, 3rem)` // scales text with screen width
+          }}
+        >
+          {item.symbol}
+        </span>
+      ))}
       {/* Title */}
       <motion.h2
         className="text-4xl font-bold text-center mb-10"

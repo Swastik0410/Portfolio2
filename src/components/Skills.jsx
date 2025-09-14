@@ -1,14 +1,42 @@
 import { motion } from "framer-motion";
 
 const skills = [
+  {name: "MongoDB", level: 65},
+  {name: "Express.js", level: 80},
   { name: "React", level: 90 },
   { name: "Node.js", level: 85 },
   { name: "TailwindCSS", level: 80 },
+  {name: "MySQL", level: 95},
+   {name: "Java", level: 60},
+];
+const codePatterns = [
+  { id: 1, symbol: "{}", top: "20%", left: "15%" },
+  { id: 2, symbol: "</>", top: "40%", left: "75%" },
+  { id: 3, symbol: "=>", top: "65%", left: "25%" },
+  { id: 4, symbol: "function()", top: "30%", left: "55%" },
+  { id: 5, symbol: "console.log()", top: "55%", left: "71%" },
+  { id: 6, symbol: "System.Out.Println('Swastik\\'s Portfolio');", top: "79%", left: "5%" }, // escaped apostrophe
+  { id: 7, symbol: "SELECT * FROM SWASTIK;", top: "10%", left: "2%" },
+  { id: 8, symbol: "npm i swastik", top: "15%", left: "65%" }
 ];
 
 export default function Skills() {
   return (
     <section id="skills" className="py-16 bg-black text-white text-center">
+      {/* Background code patterns */}
+      {codePatterns.map((item) => (
+        <span
+          key={item.id}
+          className="absolute text-gray-700 font-mono select-none pointer-events-none opacity-50"
+          style={{
+            top: item.top,
+            left: item.left,
+            fontSize: `clamp(1rem, 5vw, 3rem)` // scales text with screen width
+          }}
+        >
+          {item.symbol}
+        </span>
+      ))}
       {/* Title */}
       <motion.h2
         className="text-4xl font-bold mb-10"
